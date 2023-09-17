@@ -90,7 +90,7 @@ if data:
         col3.metric("🍽️ Food (%)", food, food_difference)
         col4.metric("💧 Water (Liter)", water, water_difference)
 
-        douars_data = pd.read_csv("./data/KhaimaAI - AllDouars.csv")
+        douars_data = pd.read_csv("streamlit/data/KhaimaAI - AllDouars.csv")
 
         coordinates = last_row.lat_long.strip('()')
         lat_str, lon_str = coordinates.split(', ')
