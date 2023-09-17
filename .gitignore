@@ -1,0 +1,6 @@
+*.wav
+.env
+tmp/
+venv/
+khaimai-venv/
+*.mp3
