@@ -55,7 +55,7 @@ with input_container:
 def generate_response(prompt):
     agent = create_csv_agent(
         ChatOpenAI(model="gpt-4-0613"),
-        "./data/KhaimaAI - AllDouars.csv",
+        "streamlit/data/KhaimaAI - AllDouars.csv",
         verbose=True,
         agent_type=AgentType.OPENAI_FUNCTIONS,
     )
