@@ -12,3 +12,4 @@ matplotlib
 gradio_client
 python-dotenv
 streamlit_chat
+tabulate
