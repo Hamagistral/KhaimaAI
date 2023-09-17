@@ -41,8 +41,8 @@ st.markdown("#### 👨‍💻 Our Team 👨‍🎓")
 
 st.image("https://i.ibb.co/W3GDf2k/Whats-App-Image-2023-09-17-at-19-56-29.jpg")
 
-st.markdown("""- EL BELGHITI Hamza: https://www.linkedin.com/in/hamza-elbelghiti/  
-            - AKHMIM Abdelilah: https://www.linkedin.com/in/akhmim-abdelilah/  
-            - OUJJIR Achraf: https://www.linkedin.com/in/achraf-oujjir/  
-            - JAKOUK Hamza: https://www.linkedin.com/in/hamza-jakouk-5b4304202/  
-            - CHEMLAL Salim: https://www.linkedin.com/in/salimchemlal/ (Our Awesome Mentor 🙌)""")
+st.markdown("- EL BELGHITI Hamza: https://www.linkedin.com/in/hamza-elbelghiti/") 
+st.markdown("- AKHMIM Abdelilah: https://www.linkedin.com/in/akhmim-abdelilah/")  
+st.markdown("- OUJJIR Achraf: https://www.linkedin.com/in/achraf-oujjir/  ")
+st.markdown("- JAKOUK Hamza: https://www.linkedin.com/in/hamza-jakouk-5b4304202/ ") 
+st.markdown("- CHEMLAL Salim: https://www.linkedin.com/in/salimchemlal/ (Our Awesome Mentor 🙌)")
