@@ -10,4 +10,4 @@ streamlit_folium
 folium
 matplotlib
 gradio_client
-dotenv
+python-dotenv
