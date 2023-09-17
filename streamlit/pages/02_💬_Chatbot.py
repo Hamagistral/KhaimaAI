@@ -32,7 +32,7 @@ st.markdown("---")
 show_df = st.toggle("Show dataframe")
 
 if show_df:
-    df = pd.read_csv("./data/KhaimaAI - AllDouars.csv")
+    df = pd.read_csv("../data/KhaimaAI - AllDouars.csv")
     st.dataframe(df)
 
 if 'generated' not in st.session_state:
