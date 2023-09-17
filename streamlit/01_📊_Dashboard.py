@@ -10,7 +10,7 @@ st.set_page_config(page_title="Morocco Disaster", layout="wide", page_icon="🇲
 
 col1, col2, col3, col4, col5 = st.columns(5)
 with col3:
-    st.image("../assets/khaimaAI.png")
+    st.image("https://i.ibb.co/Df19cyK/khaimaAI.png")
 
 st.markdown('<h4 style="text-align: center;">"Service to others is the rent you pay for your room here on Earth." - Muhammad Ali</h4>', unsafe_allow_html=True)
 
