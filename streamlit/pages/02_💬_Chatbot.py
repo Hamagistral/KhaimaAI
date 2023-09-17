@@ -27,6 +27,8 @@ st.header("💬 Chatbot")
 
 st.markdown("Our chatbot is your virtual assistant in times of need. It's here to help you find the essential resources you require after a natural disaster, such as food, water, and medical supplies. You can also ask about the nearest locations with extra resources, ensuring you get the support you need quickly. Whether it's crucial information or a friendly virtual hand, our chatbot is ready to assist you, anytime, anywhere.")
 
+st.markdown("> Note: This is a fictif data and not a real one, just for the sake of prototyping")
+
 st.markdown("---")
 
 show_df = st.toggle("Show dataframe")

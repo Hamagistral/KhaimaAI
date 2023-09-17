@@ -26,6 +26,8 @@ st.markdown("##### Step 3. When you're done, copy the link of your Google Sheet 
 
 st.info("Here's a Google Sheet for Moulay Ibrahim douar to test with: https://docs.google.com/spreadsheets/d/1uz7ekgRI7AL5ohkiFkGly4RMNri2JPRjIxjEdDRUT1U/edit#gid=0")
 
+st.markdown("> Note: This is a fictif data and not a real one, just for the sake of prototyping")
+
 st.markdown("#")
 
 st.header("📊 Dashboard")
