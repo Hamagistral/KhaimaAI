@@ -50,3 +50,11 @@ st.markdown("- **[AKHMIM Abdelilah](https://www.linkedin.com/in/akhmim-abdelilah
 st.markdown("- **[OUJJIR Achraf](https://www.linkedin.com/in/achraf-oujjir/)** ")
 st.markdown("- **[JAKOUK Hamza](https://www.linkedin.com/in/hamza-jakouk-5b4304202/)** ") 
 st.markdown("- **[CHEMLAL Salim](https://www.linkedin.com/in/salimchemlal/)**   (Our Awesome Mentor 🙌)")
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
