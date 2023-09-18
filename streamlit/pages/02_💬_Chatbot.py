@@ -34,7 +34,7 @@ st.markdown("---")
 show_df = st.toggle("Show dataframe")
 
 if show_df:
-    df = pd.read_csv("streamlit/data/KhaimaAI - AllDouars.csv")
+    df = pd.read_csv("streamlit/data/KhaimaAI - AllDouars.csv") # '../data/KhaimaAI - AllDouars.csv' for local run
     st.dataframe(df)
 
 if 'generated' not in st.session_state:
@@ -69,7 +69,11 @@ def generate_response(prompt):
 ## Conditional display of AI generated responses as a function of user provided prompts
 with response_container:
     if user_input:
-        response = generate_response(user_input)
+        try:
+            response = generate_response(user_input)
+        except:
+            response = "Sorry I don't have the answer for that 😞"
+            
         st.session_state.past.append(user_input)
         st.session_state.generated.append(response)
         

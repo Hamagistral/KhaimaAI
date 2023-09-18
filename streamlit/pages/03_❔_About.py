@@ -1,12 +1,16 @@
 import streamlit as st
 
-st.set_page_config(page_title="Morocco Disaster", page_icon="🇲🇦")
+st.set_page_config(page_title="Morocco Disaster", layout="wide", page_icon="🇲🇦")
 
 col1, col2, col3, col4, col5 = st.columns(5)
 with col3:
     st.image("https://i.ibb.co/Df19cyK/khaimaAI.png")
 
-st.markdown("# ❔ About KhaimaAI")
+st.markdown('<h4 style="text-align: center;">"Service to others is the rent you pay for your room here on Earth." - Muhammad Ali</h4>', unsafe_allow_html=True)
+
+st.markdown("<p style='text-align: center;'>Crisis Management Made Simple: KhaimaAI is a powerful disaster relief tool designed to assist authorities in efficiently managing temporary camps after natural disasters. It provides real-time data, resource optimization, and vital information, streamlining disaster response efforts and bringing aid where it's needed most.</p>", unsafe_allow_html=True)
+
+st.markdown("## ❔ About KhaimaAI")
 
 st.markdown("""### 🌋 Project for the Morocco Solidarity Hackathon 🤝
 
@@ -37,12 +41,12 @@ KhaimaAI has the potential to make a profound impact in the field of disaster re
 - Foster resilience and preparedness in communities facing future disasters.
 - Serve as a model for humanitarian assistance and disaster response worldwide.""")
 
-st.markdown("#### 👨‍💻 Our Team 👨‍🎓")
+st.markdown("#### 👨‍💻 Meet the Team ")
 
 st.image("https://i.ibb.co/W3GDf2k/Whats-App-Image-2023-09-17-at-19-56-29.jpg")
 
-st.markdown("- EL BELGHITI Hamza: https://www.linkedin.com/in/hamza-elbelghiti/") 
-st.markdown("- AKHMIM Abdelilah: https://www.linkedin.com/in/akhmim-abdelilah/")  
-st.markdown("- OUJJIR Achraf: https://www.linkedin.com/in/achraf-oujjir/  ")
-st.markdown("- JAKOUK Hamza: https://www.linkedin.com/in/hamza-jakouk-5b4304202/ ") 
-st.markdown("- CHEMLAL Salim: https://www.linkedin.com/in/salimchemlal/ (Our Awesome Mentor 🙌)")
+st.markdown("- **[EL BELGHITI Hamza](https://www.linkedin.com/in/hamza-elbelghiti/)**") 
+st.markdown("- **[AKHMIM Abdelilah](https://www.linkedin.com/in/akhmim-abdelilah/)**")  
+st.markdown("- **[OUJJIR Achraf](https://www.linkedin.com/in/achraf-oujjir/)** ")
+st.markdown("- **[JAKOUK Hamza](https://www.linkedin.com/in/hamza-jakouk-5b4304202/)** ") 
+st.markdown("- **[CHEMLAL Salim](https://www.linkedin.com/in/salimchemlal/)**   (Our Awesome Mentor 🙌)")

@@ -20,17 +20,17 @@ st.header("📝 How To Use")
 
 st.markdown("#")
 
-st.markdown("##### Step 1. Click on this link and make a copy on your own drive: https://docs.google.com/spreadsheets/d/1uz7ekgRI7AL5ohkiFkGly4RMNri2JPRjIxjEdDRUT1U/  ")
-st.markdown("##### Step 2. Replace the informations in the sheet with your own relevant informations.")
-st.markdown("##### Step 3. When you're done, copy the link of your Google Sheet above in this format (https://docs.google.com/spreadsheets/d/xxxxxxx/edit#gid=0), and paste it below ⤵️")
+st.markdown("##### Step 1. \n Click on this link and make a copy on your own drive: https://docs.google.com/spreadsheets/d/1uz7ekgRI7AL5ohkiFkGly4RMNri2JPRjIxjEdDRUT1U/  ")
+st.markdown("##### Step 2. \n Replace the existing data in the sheet with your own relevant informations.")
+st.markdown("##### Step 3. \n When you're done, copy the link of your Google Sheet above in this format (https://docs.google.com/spreadsheets/d/xxxxxxx/edit#gid=0), and paste it below ⤵️")
 
-st.info("Here's a Google Sheet for Moulay Ibrahim douar to test with: https://docs.google.com/spreadsheets/d/1uz7ekgRI7AL5ohkiFkGly4RMNri2JPRjIxjEdDRUT1U/edit#gid=0")
 
-st.markdown("> Note: This is a fictif data and not a real one, just for the sake of prototyping")
+st.markdown("")
+st.info("Here's a Google Sheet for Moulay Ibrahim douar to test with: https://docs.google.com/spreadsheets/d/1uz7ekgRI7AL5ohkiFkGly4RMNri2JPRjIxjEdDRUT1U/edit#gid=0 *(Note: This is a fictif data and not a real one, just for the sake of prototyping)*")
 
-st.markdown("#")
+st.markdown("---")
 
-st.header("📊 Dashboard")
+st.markdown("## 📊 Dashboard")
 
 st.markdown("### 🔎 To explore the data for your shelter please import your Google Sheet:")
 
@@ -41,11 +41,12 @@ def load_data(sheets_url):
             csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
             return pd.read_csv(csv_url)
 
-try:
-    df = load_data(sheet)
-    data = True
-except:
-    st.info("Please enter a valid Google Sheet url (https://docs.google.com/spreadsheets/d/xxxxxxx/edit#gid=0)")
+if sheet:
+    try:
+        df = load_data(sheet)
+        data = True
+    except:
+        st.info("Please enter a valid Google Sheet url (https://docs.google.com/spreadsheets/d/xxxxxxx/edit#gid=0)")
 
 if data:
         previous_row = df.iloc[-2]
@@ -92,7 +93,7 @@ if data:
         col3.metric("🍽️ Food (%)", food, food_difference)
         col4.metric("💧 Water (Liter)", water, water_difference)
 
-        douars_data = pd.read_csv("streamlit/data/KhaimaAI - AllDouars.csv")
+        douars_data = pd.read_csv("streamlit/data/KhaimaAI - AllDouars.csv") # '../data/KhaimaAI - AllDouars.csv' for local run
 
         coordinates = last_row.lat_long.strip('()')
         lat_str, lon_str = coordinates.split(', ')
