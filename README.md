@@ -4,7 +4,7 @@
 
 The "Morocco Solidarity Hackathon: AI to Monitor Natural Disasters Risks" is a heartfelt response to the recent earthquake that struck the southern region of Morocco. Organized by a dedicated team of Moroccan students and researchers at Mila, this hackathon is more than just a competition; it's an initiative born from a shared concern for those affected by the earthquake.
 
-![image](https://github.com/Hamagistral/KhaimaAI/assets/66017329/ec49e2fa-e850-4781-8efc-5f368b8fd748)
+![khaimaihackathon](https://github.com/Hamagistral/KhaimaAI/assets/66017329/bb58591f-76c8-49a1-bd3f-b0b7c84d7a50)
 
 ## 📅 Hackathon Details
 
