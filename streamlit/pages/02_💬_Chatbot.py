@@ -34,7 +34,16 @@ st.markdown("---")
 show_df = st.toggle("Show dataframe")
 
 if show_df:
-    df = pd.read_csv("streamlit/data/KhaimaAI - AllDouars.csv") # '../data/KhaimaAI - AllDouars.csv' for local run
+    df = pd.read_csv("streamlit/data/KhaimaAI - AllDouars.csv") # './data/KhaimaAI - AllDouars.csv' for local run
+    
+    # Define a custom function to format the contact_info values
+    def format_contact_info(value):
+        cleaned_value = value.replace('\u202F', '').replace(',', '')
+        return f"+{int(cleaned_value)}"
+
+    # Apply the custom function to the "contact_info" column
+    df['contact_info'] = df['contact_info'].apply(format_contact_info)
+
     st.dataframe(df)
 
 if 'generated' not in st.session_state:
@@ -53,6 +62,7 @@ def get_text():
 
 with input_container:
     user_input = get_text()
+    send = st.button("Send")
 
 def generate_response(prompt):
     agent = create_csv_agent(
@@ -68,7 +78,7 @@ def generate_response(prompt):
 
 ## Conditional display of AI generated responses as a function of user provided prompts
 with response_container:
-    if user_input:
+    if send and user_input:
         try:
             response = generate_response(user_input)
         except:
@@ -88,4 +98,5 @@ hide_streamlit_style = """
             footer {visibility: hidden;}
             </style>
             """
+
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 

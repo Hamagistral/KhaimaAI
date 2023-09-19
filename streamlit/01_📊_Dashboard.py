@@ -93,7 +93,7 @@ if data:
         col3.metric("🍽️ Food (%)", food, food_difference)
         col4.metric("💧 Water (Liter)", water, water_difference)
 
-        douars_data = pd.read_csv("streamlit/data/KhaimaAI - AllDouars.csv") # '../data/KhaimaAI - AllDouars.csv' for local run
+        douars_data = pd.read_csv("streamlit/data/KhaimaAI - AllDouars.csv") # './data/KhaimaAI - AllDouars.csv' for local run 
 
         coordinates = last_row.lat_long.strip('()')
         lat_str, lon_str = coordinates.split(', ')
@@ -172,40 +172,48 @@ if data:
 
         col1, col2 = st.columns(2)
 
-        #Multi-line chart
-        st.area_chart(
-                data,
-                x='date',
-                y=['population', 'injuries', 'deaths']
-        )
-
-        st.bar_chart(
-                data,
-                x='date',
-                y='tents'
-        )
-
         with col1:
             # Line Chart for Population Over Time
-            st.subheader("Population In The Camp")
+            st.subheader("👨‍👩‍👧‍👧 Population In The Camp Over Time")
             st.line_chart(data.set_index('date')['population'], height=200)
 
             st.markdown("#")
 
             # Line Chart for Food and Medicine Percentage Over Time
-            st.subheader("Food and Medicine Percentage Over Time")
+            st.subheader("🍽️ Food and ⚕️ Medicine Percentage Over Time")
             st.line_chart(data.set_index('date')[['food_in_percentage', 'medecine_in_percentage']])
+            
+            st.markdown("#")
+
+            #Multi-line chart
+            st.subheader("💀 Deaths and 🤕 Injuries In The Camp Over Time")
+            st.area_chart(
+                    data,
+                    x='date',
+                    y=['injuries', 'deaths']
+            )
 
         with col2:
             # Bar Chart for Tents Over Time
-            st.subheader("Tents In The Camp")
+            st.subheader("🏕️ Tents In The Camp Over Time")
             st.line_chart(data.set_index('date')['tents'], height=200, color="#d6281c")
 
             st.markdown("#")
 
             # Bar Chart for Water Availability Over Time
-            st.subheader("Water Availability Over Time")
+            st.subheader("💧 Water Availability Over Time")
             st.bar_chart(data.set_index('date')['water'])
+
+            st.markdown("#")
+
+            #Multi-line chart
+            st.subheader("👨‍⚕️ Healthcare Personel In The Camp Over Time")
+            st.line_chart(
+                    data,
+                    x='date',
+                    y=['healthcare_personel'],
+                    color="#eb4034"
+            )
 
 else:
         pass
