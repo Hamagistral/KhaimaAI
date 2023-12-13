@@ -34,7 +34,7 @@ st.markdown("---")
 show_df = st.toggle("Show dataframe")
 
 if show_df:
-    df = pd.read_csv("./data/KhaimaAI - AllDouars.csv") # './data/KhaimaAI - AllDouars.csv' for local run
+    df = pd.read_csv("streamlit/data/KhaimaAI - AllDouars.csv") # './data/KhaimaAI - AllDouars.csv' for local run
     
     # Define a custom function to format the contact_info values
     def format_contact_info(value):
@@ -66,8 +66,8 @@ with input_container:
 
 def generate_response(prompt):
     agent = create_csv_agent(
-        ChatOpenAI(model="gpt-4-1106-preview"),
-        "./data/KhaimaAI - AllDouars.csv",
+        ChatOpenAI(model="gpt-3.5-turbo"),
+        "streamlit/data/KhaimaAI - AllDouars.csv",
         verbose=True,
         agent_type=AgentType.OPENAI_FUNCTIONS,
     )
