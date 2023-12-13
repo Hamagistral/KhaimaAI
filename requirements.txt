@@ -1,10 +1,10 @@
+langchain
 audio_recorder_streamlit==0.0.8
 pandas==1.5.3
 pydub==0.25.1
 gradio_client==0.5.0
 openai==0.28.0
 python-dotenv==1.0.0
-langchain==0.0.348
 tiktoken
 streamlit_folium
 folium
