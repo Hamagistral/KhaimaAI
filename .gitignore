@@ -4,3 +4,4 @@ tmp/
 venv/
 khaimai-venv/
 *.mp3
+__pycache__/
